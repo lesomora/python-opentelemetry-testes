@@ -16,6 +16,8 @@ Temos os arquivos abaixo:
 
 > app/main.py: simples rota de app em Flask 
 
+> docker-compose.yaml: nossa stack de tracing com Grafana Tempo, Prometheus, Grafana Dashboards e App
+
 Requisitos: 
 
 * Docker 
@@ -30,7 +32,15 @@ Com o terminal, acesse o clone do repositório e execute:
 
 Aguarde o build da imagem finalizar, podemos rodar o nosso container: 
 
-> docker run -d --name exemplo -e APPNAME=helloworld-exemplo -p 9899:80 opentelemetry-exemplo
+> docker compose up -d 
 
+O docker vai baixar as imagens necessárias, e executar nossa stack de app. Assim que subir os containers, faça alguns testes de acesso a url: http://localhost/exemplo 
 
+Veremos que ao acessar o Grafana na url: http://localhost:3000, poderemos ir no botão explorer e ver nossas requests sendo gravadas no Grafana Tempo. 
+
+#### Lista de tracings indexados
+![Grafana](./assets/grafana.png)
+
+#### Visualização dos traces
+![Tempo](./assets/tempo.png)
 
