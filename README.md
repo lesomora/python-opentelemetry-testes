@@ -22,8 +22,6 @@ Requisitos:
 
 * Docker 
 
-* Grafana Tempo 
-
 #### Como fazer o setup
 
 Com o terminal, acesse o clone do repositório e execute: 
