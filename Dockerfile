@@ -10,4 +10,4 @@ RUN opentelemetry-bootstrap -a install
 
 COPY ./app /app
 COPY ./supervisord.conf /etc/supervisor/conf.d
-COPY ./nginx.conf /etc/nginx
+COPY ./uwsgi-nginx-entrypoint.sh /uwsgi-nginx-entrypoint.sh
