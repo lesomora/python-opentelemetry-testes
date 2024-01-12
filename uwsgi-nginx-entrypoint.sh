@@ -28,7 +28,7 @@ else
     content=$content'http {\n'
     content=$content'    include       /etc/nginx/mime.types;\n'
     content=$content'    default_type  application/octet-stream;\n'
-    content=$content'    log_format  main  'BytesReceived $bytes_received, ConnectionTime $connection_time, ConnectionsActive $connections_active, Hostname $hostname, RemoteAddress $remote_addr, StatusCode $status, UpstreamAddress $upstream_addr, Uri $uri';\n'
+    content=$content'    log_format  main  "BytesReceived $bytes_received ConnectionTime $connection_time ConnectionsActive $connections_active Hostname $hostname RemoteAddress $remote_addr StatusCode $status UpstreamAddress $upstream_addr Uri $uri";\n'
     content=$content'    access_log  /var/log/nginx/access.log  main;\n'
     content=$content'    sendfile        on;\n'
     content=$content'    keepalive_timeout  65;\n'
