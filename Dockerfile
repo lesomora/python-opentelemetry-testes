@@ -10,3 +10,4 @@ RUN opentelemetry-bootstrap -a install
 
 COPY ./app /app
 COPY ./supervisord.conf /etc/supervisor/conf.d
+COPY ./nginx.conf /etc/nginx
